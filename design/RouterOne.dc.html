@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Router One — Lukktone</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#fff;-webkit-font-smoothing:antialiased}
+a{color:#111;text-decoration:none}a:hover{color:#8a8a8a}
+details>summary{list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"";width:12px;height:12px;flex-shrink:0;background:linear-gradient(currentColor,currentColor) center/100% 1px no-repeat,linear-gradient(currentColor,currentColor) center/1px 100% no-repeat;transition:transform .25s}
+details[open]>summary::after{transform:rotate(45deg)}
+input::placeholder,textarea::placeholder{color:#767676}
+@media (max-width:860px){
+.oc-row{grid-template-columns:minmax(0,1fr) !important;gap:28px !important;padding:64px 0 !important}
+.oc-form{grid-template-columns:minmax(0,1fr) !important}
+.oc-spec{grid-template-columns:minmax(0,1fr) !important;gap:2px !important}
+.oc-topnav{display:none !important}
+}
+@media (prefers-reduced-motion:reduce){.oc-track{transition:none !important}}
+</style>
+</helmet>
+<div style="font-family: 'Switzer', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #111; background: #fff; width: 100%;">
+
+<header style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px clamp(24px, 5vw, 72px); max-width: 1440px; margin: 0 auto; box-sizing: border-box;">
+<a href="MonitorTwo.dc.html" style="font-weight: 600; font-size: 1.05rem; letter-spacing: .2em;">LUKKTONE</a>
+<nav class="oc-topnav" aria-label="Sections" style="display: flex; gap: 32px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">
+<a href="#about" style="color: #595959;">About</a>
+<a href="#specs" style="color: #595959;">Specifications</a>
+<a href="#contact" style="color: #595959;">Contact</a>
+</nav>
+</header>
+
+<main style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 72px); box-sizing: border-box;">
+
+<nav aria-label="Products" style="display: flex; gap: 32px; padding-top: 24px; border-bottom: 1px solid #e2e2e2; overflow-x: auto; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">
+<a href="MonitorTwo.dc.html" style="color: #444; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid transparent; white-space: nowrap;">Monitor Two</a>
+<a href="RouterOne.dc.html" aria-current="page" style="color: #111; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid #111; white-space: nowrap;">Router One</a>
+<a href="Main.dc.html" style="color: #444; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid transparent; white-space: nowrap;">OCACON</a>
+</nav>
+
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 72px 0 40px; flex-wrap: wrap;">
+<h1 style="margin: 0; font-weight: 400; font-size: clamp(3rem, 7vw, 6.5rem); line-height: .95; letter-spacing: -.035em;">Router One</h1>
+<div style="display: flex; gap: 28px;">
+<button type="button" onClick="{{prev}}" aria-label="Previous image" style="background: none; border: 0; cursor: pointer; font: inherit; color: #444; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; padding: 12px 0;">Prev</button>
+<button type="button" onClick="{{next}}" aria-label="Next image" style="background: none; border: 0; cursor: pointer; font: inherit; color: #444; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; padding: 12px 0;">Next</button>
+</div>
+</div>
+
+<div aria-roledescription="carousel" aria-label="Router One screenshots" style="background: #f3f3f1; overflow: hidden;">
+<div class="oc-track" style="{{trackStyle}}">
+<sc-for list="{{slides}}" as="s" hint-placeholder-count="5">
+<div aria-roledescription="slide" aria-label="{{s.label}}" aria-hidden="{{s.hidden}}" style="flex: 0 0 100%; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;">
+<img src="{{s.src}}" alt="{{s.alt}}" style="display: block; height: 86%; width: auto; max-width: 92%; object-fit: contain; box-shadow: 0 12px 40px rgba(0,0,0,.18);">
+</div>
+</sc-for>
+</div>
+</div>
+<ul style="display: flex; flex-wrap: wrap; gap: 20px; padding: 18px 0 0; margin: 0; list-style: none;">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="5">
+<li><button type="button" onClick="{{d.pick}}" aria-current="{{d.current}}" aria-label="{{d.aria}}" style="{{d.style}}">{{d.num}}</button></li>
+</sc-for>
+</ul>
+
+<section id="about" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0;">
+<div><h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">About</h2></div>
+<div>
+<p style="margin: 0; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.4; letter-spacing: -.01em; max-width: 34ch; text-wrap: pretty;">A networked audio media bridge. AES67 to AES67, AES67 to AVB/Milan.</p>
+<dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 28px; margin: 56px 0 0; padding-top: 28px; border-top: 1px solid #e2e2e2;">
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Networks</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">AES67, Milan</dd></div>
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Sample rates</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">48 / 96 kHz</dd></div>
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Form factor</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">1RU</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="platforms" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0; border-top: 1px solid #e2e2e2;">
+<div><h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">Platforms</h2></div>
+<div>
+<p style="margin: 0; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.4; letter-spacing: -.01em; max-width: 34ch; text-wrap: pretty;">One software stack that scales from a Raspberry Pi to custom FPGA hardware.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin-top: 56px;">
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 1px solid #111;">
+<span style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Compact</span>
+<h3 style="margin: 0; font-weight: 500; font-size: 1.15rem; letter-spacing: -.01em;">Raspberry Pi</h3>
+<p style="margin: 0; color: #444;">Small, low-cost bridges for compact systems.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 1px solid #111;">
+<span style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">High throughput</span>
+<h3 style="margin: 0; font-weight: 500; font-size: 1.15rem; letter-spacing: -.01em;">Software bridge</h3>
+<p style="margin: 0; color: #444;">A standard server with a high-speed network adapter, such as Intel E835, for large stream counts at higher latency.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 1px solid #111;">
+<span style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Low latency</span>
+<h3 style="margin: 0; font-weight: 500; font-size: 1.15rem; letter-spacing: -.01em;">Custom FPGA</h3>
+<p style="margin: 0; color: #444;">Dedicated FPGA I/O for the lowest latency, with MADI and word clock.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="specs" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0; border-top: 1px solid #e2e2e2;">
+<div><h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">Specifications</h2></div>
+<div>
+<details open="{{yes}}" style="border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Audio networking</summary>
+<ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0 0 28px;">
+<li>16 input and 16 output streams per port, of up to 32 channels each (hardware dependent)</li>
+<li>AES67-2023, multicast and unicast, with optional SRP reservation (AES67 Annex C)</li>
+<li>Milan/AVB, with CRF media clock streams</li>
+<li>Dante devices in AES67 mode<sup style="font-size: .8em; line-height: 0; color: #444;">†</sup></li>
+<li>Profiles: SMPTE ST 2110-30 with the ST 2059-2 PTP profile, and IPMX (VSF TR-10-1) audio</li>
+</ul>
+</details>
+<details style="border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Clocking</summary>
+<ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0 0 28px;">
+<li>Support for multiple clock domains</li>
+<li>Clock conversion from and to CRF, IPMX, PTP and word clock, in any combination</li>
+<li>Credit-based shaper and launch time support, where available in hardware</li>
+</ul>
+</details>
+<details style="border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Routing</summary>
+<ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0 0 28px;">
+<li>Stream-based routing</li>
+<li>High quality synchronous sample rate conversion</li>
+<li>Sine, square, pink noise, white noise and impulse test signals</li>
+<li>WAV file playback</li>
+<li>Peak level and clip metering</li>
+</ul>
+</details>
+<details style="border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Control</summary>
+<ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0 0 28px;">
+<li>Remote control over AES70, including AES70-21 connection management</li>
+<li>NMOS IS-04 discovery and registration, IS-05 connection management and IS-12 control</li>
+<li>ATDECC support for Milan and IEEE 1722.1 controllers, over Ethernet or WebSockets</li>
+<li>Web interface served by the device</li>
+<li>Command-line tool for diagnostics</li>
+</ul>
+</details>
+<details style="border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">FPGA hardware*</summary>
+<dl style="display: flex; flex-direction: column; margin: 0; padding: 0 0 28px;">
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Form factor</dt><dd style="margin: 0;">1RU, 19-inch rack mount</dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Network</dt><dd style="margin: 0;">2 × GbE Ethernet, each with hardware PTP timestamping<div style="color: #444;">Each port can serve a different network</div></dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Clock</dt><dd style="margin: 0;">One hardware clock disciplining every port from a shared oscillator</dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">I/O</dt><dd style="margin: 0;">4 × MADI I/O<div style="color: #444;">1 × Word clock I/O</div></dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Platform</dt><dd style="margin: 0;">Industrial x86 computer with an FPGA I/O card, running a real-time Linux kernel</dd></div>
+</dl>
+</details>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 32px; font-size: .82rem; color: #595959; max-width: 70ch;">
+<p style="margin: 0;">* Target design. Router One is in development, so hardware details may change.</p>
+<p style="margin: 0;">† Dante devices are supported in AES67 mode only at present. Native Dante support is planned.</p>
+</div>
+</div>
+</section>
+
+<section id="contact" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0; border-top: 1px solid #e2e2e2;">
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start;">
+<h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">Contact</h2>
+<a href="mailto:hello@lukktone.com" style="color: #595959;">hello@lukktone.com</a>
+</div>
+<form class="oc-form" onSubmit="{{send}}" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="r-name" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Name</label><input id="r-name" name="name" required="{{yes}}" placeholder="Your name" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="r-email" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Email</label><input id="r-email" type="email" name="email" required="{{yes}}" placeholder="you@studio.com" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="r-org" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Organisation</label><input id="r-org" name="organisation" placeholder="Optional" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="r-app" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Application</label><select id="r-app" name="application" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"><option value="">Select…</option><option>Studio</option><option>Live</option><option>Broadcast</option><option>Install</option><option>Other</option></select></div>
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="r-msg" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Message</label><textarea id="r-msg" name="message" rows="2" placeholder="Channel counts, protocols, timing — anything useful" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none; resize: vertical; min-height: 3.2em;"></textarea></div>
+<div style="grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding-top: 28px; flex-wrap: wrap;">
+<button type="submit" style="background: none; border: 0; border-bottom: 1px solid #111; padding: 12px 0 4px; cursor: pointer; font: inherit; color: #111; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Send enquiry</button>
+</div>
+</form>
+</section>
+</main>
+
+<footer style="border-top: 1px solid #e2e2e2; padding: 72px 0 56px;">
+<div class="oc-row" style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 72px); box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 2px; color: #444; font-size: .92rem;">
+<span style="color: #111; margin-bottom: 4px; font-weight: 600; font-size: 1.05rem; letter-spacing: .2em;">LUKKTONE</span>
+<span style="color: #595959;">—</span>
+<span>PADL Software Pty Ltd</span>
+<span>Melbourne, Australia</span>
+<span style="color: #595959;">—</span>
+<a href="mailto:hello@lukktone.com">hello@lukktone.com</a>
+</div>
+<div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: .78rem; color: #595959; max-width: 70ch;">
+<p style="margin: 0;">Product specifications are preliminary and subject to change without notice prior to final release.</p>
+<p style="margin: 0;">Dante is a registered trademark of Audinate Pty Ltd. Milan is a service mark of Avnu Alliance. Linux is a registered trademark of Linus Torvalds. Raspberry Pi is a trademark of Raspberry Pi Ltd. Intel is a trademark of Intel Corporation.</p>
+<p style="margin: 0;">Router One is a trademark and PADL is a registered trademark of PADL Software Pty Ltd.</p>
+</div>
+<p style="margin: 24px 0 0; color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">© 2026 PADL Software Pty Ltd dba Lukktone</p>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { i: 0 };
+  }
+  renderVals() {
+    var shots = [
+      { src: '/_blob/177919166ed45f511925d959274a36d7', alt: 'Router One web interface: patch matrix routing AES67, AVB, test tone and file player sources to AES67 and AVB sinks' },
+      { src: '/_blob/255377dfeba6c8fd5f240efc9dc2e7b4', alt: 'Router One web interface: AES67 inputs with format, source, state, signal, counters and timing for each stream' },
+      { src: '/_blob/a798da1c82b708f7e7aa9a80fa705718', alt: 'Router One web interface: Milan listeners with format, binding, state, signal, counters and timing for each stream' },
+      { src: '/_blob/bb7d18bff1e67d3724890ecbaac33e7a', alt: 'Router One web interface: device status with AES67 PTP and Milan gPTP clocks locked' },
+      { src: '/_blob/52218d80e2c082290a104e394768bee9', alt: 'Router One web interface: test tone generators for sine, square, pink noise, white noise and impulse' }
+    ];
+    var n = shots.length, i = this.state.i, self = this;
+    var go = function (k) { self.setState({ i: (k + n) % n }); };
+    var base = 'background: none; border: 0; cursor: pointer; font: inherit; font-size: .78rem; font-variant-numeric: tabular-nums; padding: 10px 0 4px; border-bottom: 1px solid ';
+    return {
+      yes: true,
+      trackStyle: 'display: flex; transition: transform .7s cubic-bezier(.6,0,.2,1); transform: translateX(-' + (i * 100) + '%);',
+      slides: shots.map(function (s, k) { return { src: s.src, alt: s.alt, label: (k + 1) + ' of ' + n, hidden: k !== i }; }),
+      dots: shots.map(function (s, k) {
+        var on = k === i;
+        return { num: '0' + (k + 1), aria: 'Show image ' + (k + 1), current: on, pick: function () { go(k); },
+          style: base + (on ? '#111; color: #111;' : 'transparent; color: #444;') };
+      }),
+      prev: function () { go(i - 1); },
+      next: function () { go(i + 1); },
+      send: function (e) {
+        e.preventDefault();
+        var f = new FormData(e.target);
+        var org = f.get('organisation');
+        var s = encodeURIComponent('Router One enquiry' + (org ? ' — ' + org : ''));
+        var body = encodeURIComponent(['Name: ' + f.get('name'), 'Email: ' + f.get('email'), 'Organisation: ' + (org || '—'), 'Application: ' + (f.get('application') || '—'), '', f.get('message') || ''].join('\n'));
+        window.open('mailto:hello@lukktone.com?subject=' + s + '&body=' + body, '_blank');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OCACON — Lukktone</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#fff;-webkit-font-smoothing:antialiased}
+a{color:#111;text-decoration:none}a:hover{color:#8a8a8a}
+details>summary{list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"";width:12px;height:12px;flex-shrink:0;background:linear-gradient(currentColor,currentColor) center/100% 1px no-repeat,linear-gradient(currentColor,currentColor) center/1px 100% no-repeat;transition:transform .25s}
+details[open]>summary::after{transform:rotate(45deg)}
+input::placeholder,textarea::placeholder{color:#767676}
+@media (max-width:860px){
+.oc-row{grid-template-columns:minmax(0,1fr) !important;gap:28px !important;padding:64px 0 !important}
+.oc-form{grid-template-columns:minmax(0,1fr) !important}
+.oc-topnav{display:none !important}
+}
+@media (prefers-reduced-motion:reduce){.oc-track{transition:none !important}}
+</style>
+</helmet>
+<div style="font-family: 'Switzer', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #111; background: #fff; width: 100%;">
+
+<header style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px clamp(24px, 5vw, 72px); max-width: 1440px; margin: 0 auto; box-sizing: border-box;">
+<a href="MonitorTwo.dc.html" style="font-weight: 600; font-size: 1.05rem; letter-spacing: .2em;">LUKKTONE</a>
+<nav class="oc-topnav" aria-label="Sections" style="display: flex; gap: 32px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">
+<a href="#about" style="color: #595959;">About</a>
+<a href="#specs" style="color: #595959;">Specifications</a>
+<a href="#contact" style="color: #595959;">Contact</a>
+</nav>
+</header>
+
+<main style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 72px); box-sizing: border-box;">
+
+<nav aria-label="Products" style="display: flex; gap: 32px; padding-top: 24px; border-bottom: 1px solid #e2e2e2; overflow-x: auto; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">
+<a href="MonitorTwo.dc.html" style="color: #444; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid transparent; white-space: nowrap;">Monitor Two</a>
+<a href="RouterOne.dc.html" style="color: #444; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid transparent; white-space: nowrap;">Router One</a>
+<a href="Main.dc.html" aria-current="page" style="color: #111; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid #111; white-space: nowrap;">OCACON</a>
+</nav>
+
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 72px 0 40px; flex-wrap: wrap;">
+<h1 style="margin: 0; font-weight: 400; font-size: clamp(3rem, 7vw, 6.5rem); line-height: .95; letter-spacing: -.035em;">OCACON</h1>
+<div style="display: flex; gap: 28px;">
+<button type="button" onClick="{{prev}}" aria-label="Previous image" style="background: none; border: 0; cursor: pointer; font: inherit; color: #444; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; padding: 12px 0;">Prev</button>
+<button type="button" onClick="{{next}}" aria-label="Next image" style="background: none; border: 0; cursor: pointer; font: inherit; color: #444; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; padding: 12px 0;">Next</button>
+</div>
+</div>
+
+<div aria-roledescription="carousel" aria-label="OCACON screenshots" style="background: #f3f3f1; overflow: hidden;">
+<div class="oc-track" style="{{trackStyle}}">
+<sc-for list="{{slides}}" as="s" hint-placeholder-count="7">
+<div aria-roledescription="slide" aria-label="{{s.label}}" aria-hidden="{{s.hidden}}" style="flex: 0 0 100%; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;">
+<img src="{{s.src}}" alt="{{s.alt}}" style="display: block; height: 92%; width: auto; max-width: 94%; object-fit: contain;">
+</div>
+</sc-for>
+</div>
+</div>
+<ul style="display: flex; flex-wrap: wrap; gap: 20px; padding: 18px 0 0; margin: 0; list-style: none;">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="7">
+<li><button type="button" onClick="{{d.pick}}" aria-current="{{d.current}}" aria-label="{{d.aria}}" style="{{d.style}}">{{d.num}}</button></li>
+</sc-for>
+</ul>
+
+<section id="about" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0;">
+<div><h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">About</h2></div>
+<div>
+<p style="margin: 0; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.4; letter-spacing: -.01em; max-width: 34ch; text-wrap: pretty;">A universal controller for AES70 devices, with Milan, NMOS and Dante connection management support.</p>
+<dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 28px; margin: 56px 0 0; padding-top: 28px; border-top: 1px solid #e2e2e2;">
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Networks</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">AES67, Milan, Dante</dd></div>
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Control</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">AES70, NMOS</dd></div>
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Platform</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">macOS</dd></div>
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Availability</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">2027</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="specs" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0; border-top: 1px solid #e2e2e2;">
+<div><h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">Specifications</h2></div>
+<div>
+<details open="{{yes}}" style="border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Features</summary>
+<ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0 0 28px;">
+<li>Patch AES67, Milan, Dante and NMOS from a crosspoint matrix per protocol</li>
+<li>Control any AES70 device, including Milan, Dante and NMOS devices represented by built-in proxies</li>
+<li>User-built control panels</li>
+<li>Network view of devices and the streams between them</li>
+</ul>
+</details>
+<details style="border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Standards</summary>
+<ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0 0 28px;">
+<li>AES70-2024 (OCA), based on the AES70-21, -22 and -23 connection management drafts</li>
+<li>AES67 and SMPTE ST 2022-7</li>
+<li>IEEE 1722.1 ATDECC</li>
+<li>NMOS IS-04 and IS-05</li>
+</ul>
+</details>
+</div>
+</section>
+
+<section id="contact" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0; border-top: 1px solid #e2e2e2;">
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start;">
+<h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">Contact</h2>
+<a href="mailto:hello@lukktone.com" style="color: #595959;">hello@lukktone.com</a>
+</div>
+<form class="oc-form" onSubmit="{{send}}" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="f-name" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Name</label><input id="f-name" name="name" required="{{yes}}" placeholder="Your name" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="f-email" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Email</label><input id="f-email" type="email" name="email" required="{{yes}}" placeholder="you@studio.com" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="f-org" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Organisation</label><input id="f-org" name="organisation" placeholder="Optional" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="f-app" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Application</label><select id="f-app" name="application" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"><option value="">Select…</option><option>Studio</option><option>Live</option><option>Broadcast</option><option>Install</option><option>Other</option></select></div>
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="f-msg" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Message</label><textarea id="f-msg" name="message" rows="2" placeholder="Devices, platforms, timing — anything useful" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none; resize: vertical; min-height: 3.2em;"></textarea></div>
+<div style="grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding-top: 28px; flex-wrap: wrap;">
+<button type="submit" style="background: none; border: 0; border-bottom: 1px solid #111; padding: 12px 0 4px; cursor: pointer; font: inherit; color: #111; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Send enquiry</button>
+</div>
+</form>
+</section>
+</main>
+
+<footer style="border-top: 1px solid #e2e2e2; padding: 72px 0 56px;">
+<div class="oc-row" style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 72px); box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 2px; color: #444; font-size: .92rem;">
+<span style="color: #111; margin-bottom: 4px; font-weight: 600; font-size: 1.05rem; letter-spacing: .2em;">LUKKTONE</span>
+<span style="color: #595959;">—</span>
+<span>PADL Software Pty Ltd</span>
+<span>Melbourne, Australia</span>
+<span style="color: #595959;">—</span>
+<a href="mailto:hello@lukktone.com">hello@lukktone.com</a>
+</div>
+<div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: .78rem; color: #595959; max-width: 70ch;">
+<p style="margin: 0;">Product specifications are preliminary and subject to change without notice prior to final release.</p>
+<p style="margin: 0;">Dante and ConMon are trademarks of Audinate Pty Ltd. Milan is a service mark of Avnu Alliance. macOS is a trademark of Apple Inc.</p>
+<p style="margin: 0;">OCACON is a trademark and PADL is a registered trademark of PADL Software Pty Ltd.</p>
+</div>
+<p style="margin: 24px 0 0; color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">© 2026 PADL Software Pty Ltd dba Lukktone</p>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2960}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { i: 0 };
+  }
+  renderVals() {
+    var shots = [
+      { src: '/_blob/2d9daf904fccab4693a41d765d929ce8', alt: 'OCACON network view: AES67, Milan and Dante devices and the streams between them' },
+      { src: '/_blob/d1cb9e93bdfe26e1d433f7e2be1dbc9f', alt: 'OCACON Dante matrix: transmitters across, receivers down, with live subscriptions' },
+      { src: '/_blob/9b2439ae259e6225622fb6afbcc4c924', alt: 'OCACON Milan matrix: talkers across, listeners down, with bound streams' },
+      { src: '/_blob/7c36624d44d993a74f5a8ebc4cd7f033', alt: 'OCACON AES67 matrix: an AES67 stream patched to sixteen receivers' },
+      { src: '/_blob/fe39f7865aea075dd4dc3bba519ea9e5', alt: 'OCACON zoomed into a device: mute and level meter blocks with their signal paths' },
+      { src: '/_blob/8b327bee53fa9c483c57e7239e426dc2', alt: 'OCACON device window: AES70 object tree with gain, balance, dim, mute and level meters' },
+      { src: '/_blob/2e905dfe83ec535ae15138fc26d4688d', alt: 'OCACON device window: gPTP time source and media transport inputs of a Milan device' }
+    ];
+    var n = shots.length, i = this.state.i, self = this;
+    var go = function (k) { self.setState({ i: (k + n) % n }); };
+    var base = 'background: none; border: 0; cursor: pointer; font: inherit; font-size: .78rem; font-variant-numeric: tabular-nums; padding: 10px 0 4px; border-bottom: 1px solid ';
+    return {
+      yes: true,
+      trackStyle: 'display: flex; transition: transform .7s cubic-bezier(.6,0,.2,1); transform: translateX(-' + (i * 100) + '%);',
+      slides: shots.map(function (s, k) { return { src: s.src, alt: s.alt, label: (k + 1) + ' of ' + n, hidden: k !== i }; }),
+      dots: shots.map(function (s, k) {
+        var on = k === i;
+        return { num: (k < 9 ? '0' : '') + (k + 1), aria: 'Show image ' + (k + 1), current: on, pick: function () { go(k); },
+          style: base + (on ? '#111; color: #111;' : 'transparent; color: #444;') };
+      }),
+      prev: function () { go(i - 1); },
+      next: function () { go(i + 1); },
+      send: function (e) {
+        e.preventDefault();
+        var f = new FormData(e.target);
+        var org = f.get('organisation');
+        var s = encodeURIComponent('OCACON enquiry' + (org ? ' — ' + org : ''));
+        var body = encodeURIComponent(['Name: ' + f.get('name'), 'Email: ' + f.get('email'), 'Organisation: ' + (org || '—'), 'Application: ' + (f.get('application') || '—'), '', f.get('message') || ''].join('\n'));
+        window.open('mailto:hello@lukktone.com?subject=' + s + '&body=' + body, '_blank');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Monitor Two — Lukktone</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#fff;-webkit-font-smoothing:antialiased}
+a{color:#111;text-decoration:none}a:hover{color:#8a8a8a}
+details>summary{list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"";width:12px;height:12px;flex-shrink:0;background:linear-gradient(currentColor,currentColor) center/100% 1px no-repeat,linear-gradient(currentColor,currentColor) center/1px 100% no-repeat;transition:transform .25s}
+details[open]>summary::after{transform:rotate(45deg)}
+input::placeholder,textarea::placeholder{color:#767676}
+@media (max-width:860px){
+.oc-row{grid-template-columns:minmax(0,1fr) !important;gap:28px !important;padding:64px 0 !important}
+.oc-form{grid-template-columns:minmax(0,1fr) !important}
+.oc-spec{grid-template-columns:minmax(0,1fr) !important;gap:2px !important}
+.oc-topnav{display:none !important}
+.oc-hero{width:92% !important}
+}
+</style>
+</helmet>
+<div style="font-family: 'Switzer', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #111; background: #fff; width: 100%;">
+
+<header style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px clamp(24px, 5vw, 72px); max-width: 1440px; margin: 0 auto; box-sizing: border-box;">
+<a href="MonitorTwo.dc.html" style="font-weight: 600; font-size: 1.05rem; letter-spacing: .2em;">LUKKTONE</a>
+<nav class="oc-topnav" aria-label="Sections" style="display: flex; gap: 32px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">
+<a href="#about" style="color: #595959;">About</a>
+<a href="#specs" style="color: #595959;">Specifications</a>
+<a href="#contact" style="color: #595959;">Contact</a>
+</nav>
+</header>
+
+<main style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 72px); box-sizing: border-box;">
+
+<nav aria-label="Products" style="display: flex; gap: 32px; padding-top: 24px; border-bottom: 1px solid #e2e2e2; overflow-x: auto; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">
+<a href="MonitorTwo.dc.html" aria-current="page" style="color: #111; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid #111; white-space: nowrap;">Monitor Two</a>
+<a href="RouterOne.dc.html" style="color: #444; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid transparent; white-space: nowrap;">Router One</a>
+<a href="Main.dc.html" style="color: #444; padding-bottom: 12px; margin-bottom: -1px; border-bottom: 1px solid transparent; white-space: nowrap;">OCACON</a>
+</nav>
+
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 72px 0 40px; flex-wrap: wrap;">
+<h1 style="margin: 0; font-weight: 400; font-size: clamp(3rem, 7vw, 6.5rem); line-height: .95; letter-spacing: -.035em;">Monitor Two</h1>
+</div>
+
+<div style="background: #f3f3f1; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;">
+<img class="oc-hero" src="/_blob/f346adc8e45f3c7b6cceb10c5122ef71" alt="Monitor Two personal monitor mixer with touchscreen and three rotary encoders" style="display: block; width: 78%; height: auto; object-fit: contain;">
+</div>
+
+<section id="about" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0;">
+<div><h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">About</h2></div>
+<div>
+<p style="margin: 0; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.4; letter-spacing: -.01em; max-width: 34ch; text-wrap: pretty;">A low latency personal monitor mixer with Dante, AES67 and Milan support, two independent outputs, and a high resolution OLED touchscreen.</p>
+<dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 28px; margin: 56px 0 0; padding-top: 28px; border-top: 1px solid #e2e2e2;">
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Channels</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">64 (32)</dd></div>
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Latency</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">&lt; 1 ms</dd></div>
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Networking</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">Dante, AES67, Milan</dd></div>
+<div style="grid-column: span 2;"><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">MSRP (USD)</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500; display: flex; flex-direction: column; gap: 2px;"><span>$2,500</span><span style="font-weight: 400; font-size: .85rem; color: #595959;">+$50 activation fee for Milan support</span></dd></div>
+<div><dt style="color: #595959; margin-bottom: 6px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Availability</dt><dd style="margin: 0; font-size: 1.05rem; font-weight: 500;">2027</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="specs" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0; border-top: 1px solid #e2e2e2;">
+<div><h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">Specifications</h2></div>
+<div>
+<details open="{{yes}}" style="border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Network</summary>
+<dl style="display: flex; flex-direction: column; margin: 0; padding: 0 0 28px;">
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">I/O count</dt><dd style="margin: 0;">64 channels of Dante/AES67<div style="color: #444;">32 channels of Milan<sup style="font-size: .8em; line-height: 0;">‡</sup></div></dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Latency</dt><dd style="margin: 0;">&lt; 1 ms end-to-end, analog in to analog out*</dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Ethernet</dt><dd style="margin: 0;">Locking etherCON network connectors</dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Remote control</dt><dd style="margin: 0;">OCA (AES70), OSC and NMOS (IS-04, IS-05 and IS-12) control of all parameters<div style="color: #444;">Remote control and orchestration apps</div><div style="color: #444;">Input label synchronisation with Pro Tools</div></dd></div>
+</dl>
+</details>
+<details style="border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Audio</summary>
+<dl style="display: flex; flex-direction: column; margin: 0; padding: 0 0 28px;">
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Converters</dt><dd style="margin: 0;">AKM AK4499EX/AK4191 64-bit DACs with external jitter cleaner</dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Sample rates</dt><dd style="margin: 0;">44.1 / 48 / 88.2 / 96 kHz<sup style="font-size: .8em; line-height: 0;">†</sup></dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Headphone amp</dt><dd style="margin: 0;">High output amplifier suitable for driving a variety of headphone impedances</dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Outputs</dt><dd style="margin: 0;">Two independent headphone outputs<div style="color: #444;">XLR line output mirroring second headphone</div><div style="color: #444;">Both mixes also available as Dante network outputs</div></dd></div>
+</dl>
+</details>
+<details style="border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">User Interface</summary>
+<dl style="display: flex; flex-direction: column; margin: 0; padding: 0 0 28px;">
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Display</dt><dd style="margin: 0;">7″ OLED high resolution touchscreen with Gorilla Glass<div style="color: #444;">Three assignable rotary encoders</div></dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Groups</dt><dd style="margin: 0;">8 channel groups (VCAs), freely assignable across channels</dd></div>
+</dl>
+</details>
+<details style="border-bottom: 1px solid #e2e2e2;">
+<summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 1.15rem; letter-spacing: -.01em;">Physical</summary>
+<dl style="display: flex; flex-direction: column; margin: 0; padding: 0 0 28px;">
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Dimensions</dt><dd style="margin: 0;">223 × 138 × 35 mm</dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Power</dt><dd style="margin: 0;">PoE 802.3at and/or 12 VDC barrel jack</dd></div>
+<div class="oc-spec" style="display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 10px 0;"><dt style="color: #595959; padding-top: 4px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Chassis</dt><dd style="margin: 0;">Anodised aluminium<div style="color: #444;">3/8″ thread mount</div></dd></div>
+</dl>
+</details>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 32px; font-size: .82rem; color: #595959; max-width: 70ch;">
+<p style="margin: 0;">* Measured an end-to-end analog latency of approximately 0.8 ms using Pro Tools | HDX and Pro Tools | MTRX at 96 kHz (including Dante latency of 0.25 ms).</p>
+<p style="margin: 0;">† 44.1 kHz and 88.2 kHz sample rates only available in Dante mode. High sample rates halve Dante channel count to 32. Milan supports 32 channels at all sample rates.</p>
+<p style="margin: 0;">‡ Milan requires a one-time activation fee ($50 USD).</p>
+</div>
+</div>
+</section>
+
+<section id="contact" class="oc-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; padding: 96px 0; border-top: 1px solid #e2e2e2;">
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start;">
+<h2 style="margin: 0; font-weight: 500; font-size: 1.5rem; letter-spacing: -.015em; line-height: 1.2;">Contact</h2>
+<a href="mailto:hello@lukktone.com" style="color: #595959;">hello@lukktone.com</a>
+</div>
+<form class="oc-form" onSubmit="{{send}}" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="m-name" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Name</label><input id="m-name" name="name" required="{{yes}}" placeholder="Your name" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="m-email" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Email</label><input id="m-email" type="email" name="email" required="{{yes}}" placeholder="you@studio.com" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="m-org" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Organisation</label><input id="m-org" name="organisation" placeholder="Optional" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="m-app" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Application</label><select id="m-app" name="application" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none;"><option value="">Select…</option><option>Studio</option><option>Live</option><option>Broadcast</option><option>Install</option><option>Other</option></select></div>
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-bottom: 1px solid #e2e2e2;"><label for="m-msg" style="color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Message</label><textarea id="m-msg" name="message" rows="2" placeholder="Channel counts, quantities, timing — anything useful" style="background: none; border: 0; font: inherit; color: #111; width: 100%; outline: none; resize: vertical; min-height: 3.2em;"></textarea></div>
+<div style="grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding-top: 28px; flex-wrap: wrap;">
+<button type="submit" style="background: none; border: 0; border-bottom: 1px solid #111; padding: 12px 0 4px; cursor: pointer; font: inherit; color: #111; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">Send enquiry</button>
+</div>
+</form>
+</section>
+</main>
+
+<footer style="border-top: 1px solid #e2e2e2; padding: 72px 0 56px;">
+<div class="oc-row" style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 72px); box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 2px; color: #444; font-size: .92rem;">
+<span style="color: #111; margin-bottom: 4px; font-weight: 600; font-size: 1.05rem; letter-spacing: .2em;">LUKKTONE</span>
+<span style="color: #595959;">—</span>
+<span>PADL Software Pty Ltd</span>
+<span>Melbourne, Australia</span>
+<span style="color: #595959;">—</span>
+<a href="mailto:hello@lukktone.com">hello@lukktone.com</a>
+</div>
+<div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: .78rem; color: #595959; max-width: 70ch;">
+<p style="margin: 0;">Product specifications are preliminary and subject to change without notice prior to final release.</p>
+<p style="margin: 0;">Dante is a registered trademark of Audinate Pty Ltd. Milan is a service mark of Avnu Alliance. etherCON is a registered trademark of Neutrik AG. Avid and Pro Tools are registered trademarks, and Pro Tools | HDX and Pro Tools | MTRX are trademarks, of Avid Technology, Inc. Gorilla is a registered trademark of Corning Incorporated.</p>
+<p style="margin: 0;">Monitor Two is a trademark and PADL is a registered trademark of PADL Software Pty Ltd.</p>
+</div>
+<p style="margin: 24px 0 0; color: #595959; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;">© 2026 PADL Software Pty Ltd dba Lukktone</p>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      yes: true,
+      send: function (e) {
+        e.preventDefault();
+        var f = new FormData(e.target);
+        var org = f.get('organisation');
+        var s = encodeURIComponent('Monitor Two enquiry' + (org ? ' — ' + org : ''));
+        var body = encodeURIComponent(['Name: ' + f.get('name'), 'Email: ' + f.get('email'), 'Organisation: ' + (org || '—'), 'Application: ' + (f.get('application') || '—'), '', f.get('message') || ''].join('\n'));
+        window.open('mailto:hello@lukktone.com?subject=' + s + '&body=' + body, '_blank');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
